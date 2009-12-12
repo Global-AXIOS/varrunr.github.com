@@ -1,12 +1,121 @@
+<!DOCTYPE html>
 <html>
-<head>
-<title>My github page</title>
-</head>
-<body>
-<h1>
-<a href="gateway.php"> varrunr.github.com </a>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Varrun's Github</title>
+		<link type="text/css" href="css/flick/jquery-ui-1.7.2.custom.css" rel="stylesheet" />	
+		<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
 
+	
+				// Tabs
+				$('#tabs').tabs();
+	
 
-</h1>
-</body>
+				// Dialog			
+				$('#dialog').dialog({
+					autoOpen: false,
+					width: 600,
+					buttons: {
+						"Ok": function() { 
+							$(this).dialog("close"); 
+						}, 
+						"Cancel": function() { 
+							$(this).dialog("close"); 
+						} 
+					}
+				});
+				
+				// Dialog Link
+				$('#dialog_link').click(function(){
+					$('#dialog').dialog('open');
+					return false;
+				});
+
+				
+				
+			});
+		</script>
+		<style type="text/css">
+			/*demo page css*/
+			body{ font: 80% "Trebuchet MS", sans-serif; margin: 50px;}
+			.demoHeaders { margin-top: 2em; }
+			#dialog_link {padding: .4em 1em .4em 20px;text-decoration: none;position: relative;}
+			#dialog_link span.ui-icon {margin: 0 5px 0 0;position: absolute;left: .2em;top: 50%;margin-top: -8px;}
+			ul#icons {margin: 0; padding: 0;}
+			ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
+			ul#icons span.ui-icon {float: left; margin: 0 4px;}
+		</style>	
+	</head>
+	<body background="css/flick/images/bg_sil.jpg">
+	<div style="padding-left:250px">
+    <table width="600" border="1" bordercolor="#000000">
+      <tr>
+        <td><img src="css/flick/images/header.jpg" width="600" height="200"></td>
+      </tr>
+    </table>
+	<!-- Tabs -->
+	<h2 class="demoHeaders"></h2>
+		<div id="tabs">
+			<ul>
+			
+				<li><a href="#tabs-1">&nbsp;About Me</a></li>
+			
+				<li><a href="#tabs-2">Research Interests</a></li>
+			<!--	<li><a href="#tabs-3">Third</a></li>
+			-->
+			</ul>
+			<div id="tabs-1" style="font-family:Verdana font-size:16px;">
+            <table width="579" border="0" cellpadding="10">
+              <tr>
+                <td width="110"><img src="css/flick/images/me.jpg" width="110" height="110"></td>
+                <td width="453"><strong>Varrun Ramani</strong>, a student of <em>Amrita University, Amritapuri</em>, pursuing my Bachelors  in Computer Science and Engineering. My hometown is Chennai.<br/>
+                  <br/></td>
+              </tr>
+              <tr >
+                <td colspan="2">I pour out some of my ideas, thoughts and interests in my blog: <a href="http://varrunr.wordpress.com">http://varrunr.wordpress.com </a></td>
+                
+              </tr>
+            </table>			
+			<br/>
+			<br/>
+			
+			
+			
+			
+		  </div>
+			
+			<div id="tabs-2">
+            <h3 style="color:#000099">Primary areas of interest</h3>
+            <ul> 
+            <li> Analysis and Design of Algorithms </li>
+            <li> Problem Solving </li>
+            <li> Theory of Computation </li>
+            <li> Compilers </li>
+            </ul><br/>
+            <h3 style="color:#000099">Research Interests</h3>
+            <ul>
+            <li> Information Security </li>
+            <li> Formal Methods </li>
+            <li> Temporal Logic </li>
+            </ul>
+            
+            </div>
+			<!--
+            <div id="tabs-3"></div>
+	-->
+		</div>
+	
+		
+		<!-- ui-dialog -->
+		<div id="dialog" title="Dialog Title">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</div>
+		
+	</div>	
+	</body>
 </html>
+
+
